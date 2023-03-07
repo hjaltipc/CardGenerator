@@ -1,0 +1,44 @@
+{
+    "Sectors": [
+        "Housing", 
+        "Entertainment",
+        "Renewable Energy",
+        {"Military": ["weapons","vehicles","gear"]},
+        "Healthcare",
+        "Virtual Reality",
+        "Agriculture",
+        {"Financial Technology":["Personal saving",""]},
+        "Space Exploration",
+        "Transportation",
+        "Security"
+    ],
+    "Technologies":[
+        {"App":[
+            "A website",
+        "An app",
+        "A machine learning model", 
+        "A chatbot",
+        "A Non-fungible token project", 
+        "A video game",
+        "A Virtual Reality enviornment",
+        "A robot",
+        "A drone",
+        "An Internet of things device",
+        "A self driving vehicle",
+        "A cryptocurrency",
+        ""
+        ]},
+        {"AI":[]},
+        {"Databases":[]}
+      
+    ],
+    "Weaknesses":[
+        {"But it is really, really racist":["it's trained with racially biased datasets",""]}, 
+        "But it is really, really sexist",
+        "But it consumes a ridiculous amount of energy",
+        "But it collects all the personal data it possibly can",
+        "But it does not work with screen readers",
+        "But the text size is microscopic",
+        ""
+    ]
+}
