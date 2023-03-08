@@ -3,14 +3,16 @@
         "Housing", 
         "Entertainment",
         "Renewable Energy",
-        {"Military": ["weapons","vehicles","gear"]},
+        "Space Exploration",
+        "Transportation",
+        "Security",
         "Healthcare",
         "Virtual Reality",
         "Agriculture",
+        "Elder care",
+        "Pet care",
         {"Financial Technology":["Personal saving",""]},
-        "Space Exploration",
-        "Transportation",
-        "Security"
+        {"Military": ["weapons","vehicles","gear"]}
     ],
     "Technologies":[
         {"App":[

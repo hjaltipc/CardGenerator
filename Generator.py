@@ -1,4 +1,24 @@
 from fpdf import FPDF
+import json
+
+
+def generateCardBacks():
+    row = 0
+    column = 4
+    #Adds new page for back of sector cards
+    pdf.add_page()
+    for (index,item) in enumerate(data["Sectors"][:-2]):
+        column -= 1
+        if column == -1:
+            row += 1
+            column = 3
+        pdf.set_y((col_body+col_title)*row)
+        pdf.set_x(50 * column)
+        pdf.cell(col_width, col_title+col_body, txt = "Sectors", border = 1, align = 'C')
+
+#opens and returns file content as dictionary
+f = open('StartupSuperfight.json')
+data = json.load(f)
 
 #saves DPDF class to variable
 pdf = FPDF()
@@ -8,10 +28,29 @@ pdf.add_page()
 
 pdf.set_font("Arial", size = 15)
 
-pdf.cell(200, 10, txt = "Shrek",
-    ln = 1, align = 'C')
+col_width = 50
+col_title = 20
+col_body = 50
+row = 0
+column = 0
 
-pdf.cell(200, 10, txt = "ccording to all known laws of aviation, there is no way a bee should be able to fly. It's wings are too small to get its fat little body off the ground. The bee, of course, flies anyway, because bees don't care what humans think is impossible.",
-    ln = 2, align = 'C')
+#places and generate cards
+for (index,item) in enumerate(data["Sectors"][:-2]):
+    if (column+1)%5 == 0:
+        row += 1
+        column = 0
+    print(index, item)
+    pdf.set_y((col_body+col_title)*row)
+    pdf.set_x(50 * column)
+    pdf.cell(col_width, col_title, txt = item, border = "LRT", ln = 2, align = 'C')
+    pdf.cell(col_width, col_body, txt = "Shrek", border = "LRB", align = 'C')
+    column += 1
+generateCardBacks()
+
+
+#Adds new page for App cards
+pdf.add_page()
+
 
 pdf.output("Shrek.pdf")
+f.close()
