@@ -34,13 +34,13 @@
         {"Databases":[]}
       
     ],
-    "Weaknesses":[
-        {"But it is really, really racist":["it's trained with racially biased datasets",""]}, 
+    "Weaknesses":[ 
         "But it is really, really sexist",
         "But it consumes a ridiculous amount of energy",
         "But it collects all the personal data it possibly can",
         "But it does not work with screen readers",
         "But the text size is microscopic",
+        {"But it is really, really racist":["it's trained with racially biased datasets",""]},
         ""
     ]
 }
